@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 20 14.3% 4.1%;
+  --muted: 60 4.8% 95.9%;
+  --muted-foreground: 25 5.3% 44.7%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 20 14.3% 4.1%;
+  --card: 0 0% 100%;
+  --card-foreground: 20 14.3% 4.1%;
+  --border: 20 5.9% 90%;
+  --input: 20 5.9% 90%;
+  --primary: 219 49% 49%;
+  --primary-light: 219 49% 62%;
+  --primary-dark: 219 49% 36%;
+  --primary-foreground: 211 100% 99%;
+  --secondary: 199 60% 67%;
+  --secondary-light: 199 60% 77%;
+  --secondary-dark: 199 60% 55%;
+  --secondary-foreground: 24 9.8% 10%;
+  --accent: 39 91% 51%;
+  --accent-light: 39 91% 63%;
+  --accent-dark: 39 91% 41%;
+  --accent-foreground: 24 9.8% 10%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 60 9.1% 97.8%;
+  --ring: 20 14.3% 4.1%;
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --primary: 219 49% 49%;
+  --primary-light: 219 49% 62%;
+  --primary-dark: 219 49% 36%;
+  --primary-foreground: 211 100% 99%;
+  --secondary: 199 60% 67%;
+  --secondary-light: 199 60% 77%;
+  --secondary-dark: 199 60% 55%;
+  --secondary-foreground: 0 0% 98%;
+  --accent: 39 91% 51%;
+  --accent-light: 39 91% 63%;
+  --accent-dark: 39 91% 41%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 240 4.9% 83.9%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-neutral-100 text-neutral-700 min-h-screen;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Nunito', sans-serif;
+  }
+
+  .font-heading {
+    font-family: 'Nunito', sans-serif;
+  }
+}
+
+.recording-wave {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.recording-wave span {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  margin: 0 2px;
+  background-color: hsl(var(--accent));
+  border-radius: 50%;
+  animation: wave 1.5s infinite ease-in-out;
+}
+
+@keyframes wave {
+  0%, 100% { transform: scaleY(1); }
+  50% { transform: scaleY(3); }
+}
+
+.recording-wave span:nth-child(1) { animation-delay: 0s; }
+.recording-wave span:nth-child(2) { animation-delay: 0.1s; }
+.recording-wave span:nth-child(3) { animation-delay: 0.2s; }
+.recording-wave span:nth-child(4) { animation-delay: 0.3s; }
+.recording-wave span:nth-child(5) { animation-delay: 0.4s; }
+.recording-wave span:nth-child(6) { animation-delay: 0.5s; }
+.recording-wave span:nth-child(7) { animation-delay: 0.6s; }
+.recording-wave span:nth-child(8) { animation-delay: 0.7s; }

@@ -1,0 +1,23 @@
+# Environment variables
+.env
+.env.local
+.env.*
+
+# Build outputs
+dist/
+build/
+node_modules/
+
+# Firebase files
+firebase-debug.log
+firebase-debug.*.log
+.firebase/
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# macOS
+.DS_Store

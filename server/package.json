@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "firebase": "^11.7.3",
+    "firebase-admin": "^13.4.0"
+  },
+  "scripts": {
+    "dev": "NODE_ENV=development tsx server/index.ts",
+    "build": "cd client && npm install && npm run build", 
+    "start": "NODE_ENV=production tsx server/index.ts"
+  }
+}
